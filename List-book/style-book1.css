@@ -9,7 +9,7 @@ main{
         padding-top: 6rem;
         display: flex;
         justify-content: space-around;
-
+        flex-wrap: wrap; /* ทำให้เนื้อหาสามารถห่อกันเมื่อหน้าจอเล็กลง */
 
         .left{
             width: 60%;
@@ -42,8 +42,19 @@ main{
             border-radius: 10px;
             box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
         }
+       
 
-   
+h2, h3 {
+        font-family: "Prompt", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+}
 
+p {
+        font-family: "Prompt", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        text-indent: 30px; /* Indents the first line of the paragraph */
+}
     }
 }
