@@ -4,6 +4,16 @@
     box-sizing: border-box;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+ิbody {
+    h5 {
+          .prompt-regular {
+            font-family: "Prompt", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+          }
+          
+    }  
+}
 nav{
     width: 100%;
     height: 8vh;
@@ -90,7 +100,7 @@ nav{
         }
     }
         .row {
-            margin-bottom: 10px;
+            margin-bottom: 0px;
         }
         
         main {
@@ -104,12 +114,40 @@ main{
     flex-direction: column;
     gap: 1rem;
 
-    .section1{
-        width: 100%;
-        height: 80vh;
-        margin-bottom: 5;
+    .carousel {
+        width: 100%; 
+        height: 50vh; 
+        max-width: 1200px; 
+        margin: 30px auto;
     }
+
+    .carousel-caption h5 {
+        font-family: "Prompt", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: #ffffff; /* เปลี่ยนเป็นสีทอง */
+        font-size: 24px; /* ขนาดฟอนต์ */
+    }
+    
+    .carousel-caption p {
+        font-family: "Prompt", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        text-indent: 30px; /* Indents the first line of the paragraph */
+        color: #ffffff; /* เปลี่ยนเป็นสีส้ม */
+        font-size: 16px; /* ขนาดฟอนต์ */
+    }
+    
+    .carousel-caption {
+        background-color: rgba(255, 255, 255, 0.5); /* พื้นหลังโปร่งใส */
+        padding: 10px; /* ระยะห่างภายใน */
+        border-radius: 5px; /* ขอบโค้งมน */
+        text-align: center; /* จัดข้อความให้กลาง */
+    }
+    
+
     h3{
+        margin-top: 5;
         width: 100%;
         text-align: center;
         color: #1b9b77;
@@ -126,51 +164,77 @@ main{
         row-gap: 3rem;
         padding-bottom: 10vh;
 
-        .inbox{
-            h3{
-                border: none;
-                height: 4vh;
-                font-size: 20px;
-                color: black;
-                border-right: 2px solid #1b9b77;
-                border-left: 2px solid #1b9b77;
-            }
+        .inbox {
+            text-align: center; /* จัดกลาง */
+            margin: 20px; /* ระยะห่าง */
+            border: 1px solid #0d2516; /* ขอบของกล่อง */
+            border-radius: 10px; /* ขอบโค้ง */
+            padding: 15px; /* ระยะห่างภายในกล่อง */
+            background-color: #fafafa; /* สีพื้นหลัง */
         }
-        .box{
-            width: 300px;
-            height: 400px;
-            transition: .25s ease-in-out;
-            cursor: pointer;
-            position: relative;
-            border-radius: 10px;
+        
+        .inbox h3 {
+            font-size: 24px; /* ขนาดฟอนต์ */
+            color: #0d2516; /* สี */
+            margin-bottom: 10px; /* ระยะห่างด้านล่าง */
         }
-        .box:hover{
-            transform: translatey(-10px);
+        
+        .inbox h5 {
+            font-size: 16px; /* ขนาดฟอนต์ */
+            color: #050505; /* สี */
+            line-height: 1.5; /* ระยะห่างบรรทัด */
+            margin-top: 10px; /* ระยะห่างด้านบน */
         }
-        .box1{
+        
+        .box {
+            width: 300px; /* กว้าง 300px */
+            height: 400px; /* สูง 400px */
+            transition: .25s ease-in-out; /* เอฟเฟกต์การเคลื่อนไหว */
+            cursor: pointer; /* เปลี่ยนเคอร์เซอร์ */
+            border-radius: 10px; /* ขอบโค้ง */
+            overflow: hidden; /* ซ่อนส่วนเกิน */
+            display: flex; /* ใช้ Flexbox */
+            justify-content: center; /* จัดกลางในแนวนอน */
+            align-items: center; /* จัดกลางในแนวตั้ง */
+            margin: 0 auto; /* จัดกลางกล่อง */
+        }
+        
+        .box:hover {
+            transform: translateY(-10px);
+        }
+        
+        .box1, .box2, .box3, .box4 {
+            background-position: center; /* จัดกลางภาพพื้นหลัง */
+            background-size: cover; /* ปรับขนาดภาพพื้นหลัง */
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; /* เงาของกล่อง */
+        }
+        
+        .box1 {
             background-image: url(/images/almond.jpg);
-            background-position: center;
-            background-size: cover;
-            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
         }
-        .box2{
+        
+        .box2 {
             background-image: url(/images/flower.jpg);
-            background-position: center;
-            background-size: cover;
-            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
         }
-        .box3{
+        
+        .box3 {
             background-image: url(/images/moon.jpg);
-            background-position: center;
-            background-size: cover;
-            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
         }
-        .box4{
+        
+        .box4 {
             background-image: url(/images/myheart.jpg);
-            background-position: center;
-            background-size: cover;
-            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
         }
+        
+        .box img {
+            width: 100%; /* ขนาดภาพเต็มที่ */
+            height: auto; /* สูงอัตโนมัติ */
+            display: block; /* ปิดการแสดงผล */
+            border-radius: 10px; 
+            margin-bottom: 30px;
+        }
+        }  
+       
     }
 
-}
+
+    
